@@ -9,9 +9,9 @@ A work in progress.
 
 # What works now:
 
-    $ node index.js yourfile.md
+    $ node index.js 
 
-This builds yourfile.md into a html file using the layout specified in the front matter of the md file (similar to jekyll). Writes html file to `_site` folder.
+This builds `yourfile.md` into a html file using the layout specified in the front matter of the md file (similar to jekyll). Writes html file to the root folder.
 
 Provides `toc` and `body` variables within the jade template.
 
