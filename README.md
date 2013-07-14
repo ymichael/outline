@@ -1,27 +1,60 @@
-# Outline: A Static Site Generator
+# Outline: A Markdown to HTML Static Site Generator
 
-Inspired by Jekyll but built with the following in mind:
-- Uses jade for layouts
-- Uses markdown for documents/posts/files etc
-- Generates a table of contents from the headings in the markdown files
+Inspired by [Jekyll][0] but built with the following in mind:
+- [Jade][1] templates
+- [Markdown][2] documents
+- [node.js][3]
+- Generates a table of contents from the headings in the markdown document
 
-A work in progress.
+# Installation
 
-# What works now:
+    $ npm install -g outline-md
 
-    $ node index.js 
+# Quick Start
+Run the following command in the folder containing your `.md` files.
 
-This builds `yourfile.md` into a html file using the layout specified in the front matter of the md file (similar to jekyll). Writes html file to the root folder.
+    $ outline-md
 
-Provides `toc` and `body` variables within the jade template.
+This __deletes__ all existing `.html` files in the folder and compiles the `.md` files into HTML using the default layout. 
 
-# Deps
-- node.js
-- node modules
-    - jade
-    - marked
-    - yaml
+# Document Metadata (Front Matter)
+Much like `Jekyll` posts, you can attach metadata to your documents using [YAML][4]. Here is a sample document
+
+```md
+---
+title: This is the title of my document.
+layout: base
+---
+# Introduction
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue.
+
+# Body
+Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+
+# Conclusion
+```
+
+# Layouts
+Like `Jekyll`, outline searches for layouts in the `_layouts` directory. If no layout is specified, the default layout is used.
+
+```jade
+// sample layout
+!!!
+html
+  head
+  body
+    #toc!= toc
+    #contents!= body
+```
+
+The jade template is given the `toc` and `body` variables parsed from the markdown. All other metadata from the document front matter is passed to the layout as well.
 
 # Credits
-- Borrows heavily from Heckle source code. Esp the file parsing part (which I was lazy to implement.).
+- Borrows heavily from [Heckle][5] source code.
 
+[0]: http://jekyllrb.com/
+[1]: http://jade-lang.com/
+[2]: http://daringfireball.net/projects/markdown/
+[3]: http://nodejs.org
+[4]: http://www.yaml.org/
+[5]: https://github.com/marijnh/heckle
