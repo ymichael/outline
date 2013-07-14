@@ -6,6 +6,7 @@ css: ['css/stylesheet.css', 'css/pygments']
 # Introduction
 
 Inspired by [Jekyll][0] but built with the following in mind:
+
 - [Jade][1] templates
 - [Markdown][2] documents
 - [node.js][3]
