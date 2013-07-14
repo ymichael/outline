@@ -1,5 +1,5 @@
 ---
-title: Outline: A Markdown to HTML Static Site Generator
+title: "Outline: A Markdown to HTML Static Site Generator"
 ---
 # Introduction
 
