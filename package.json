@@ -1,7 +1,8 @@
 {
-  "name": "projectintern",
+  "name": "outline-md",
   "version": "0.0.0",
-  "description": "Project Intern Site",
+  "description": "Static site generator inspired by jekyll",
+  "main": "index.js",
   "dependencies": {
       "marked": "*",
       "jade": "*",
