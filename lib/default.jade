@@ -5,15 +5,16 @@ html
     if css
       //- Array
       if css.length
-        for sheet in css
-         link(rel="stylesheet",type="text/css",href="#{ css }")    
+        each sheet in css
+          link(rel="stylesheet",type="text/css",href="#{ sheet }")    
      else
         link(rel="stylesheet",type="text/css",href="#{ css }")
     body
-      header
+
+      header.container
         h1= title
-        nav
-            h2 Table of Contents
-            #toc!= toc
-            main
-                #doc!= body
+      nav.container
+          h2 Table of Contents
+          #toc!= toc
+      main.container
+          #doc!= body

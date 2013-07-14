@@ -1,6 +1,6 @@
 ---
 title: "Outline: A Markdown to HTML Static Site Generator"
-css: ['/css/stylesheet.css', '/css/pygments.css']
+css: ['css/stylesheet.css', 'css/pygments.css']
 ---
 
 # Introduction
