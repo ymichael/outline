@@ -1,0 +1,10 @@
+{
+  "name": "projectintern",
+  "version": "0.0.0",
+  "description": "Project Intern Site",
+  "dependencies": {
+      "marked": "*",
+      "jade": "*",
+      "yaml": "*"
+  }
+}
