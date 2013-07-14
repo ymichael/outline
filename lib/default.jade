@@ -7,14 +7,13 @@ html
       if css.length
         for sheet in css
          link(rel="stylesheet",type="text/css",href="#{ css }")    
-         
      else
         link(rel="stylesheet",type="text/css",href="#{ css }")
-          body
-            header
-              h1= title
-              nav
-                  h2 Table of Contents
-                  #toc!= toc
-                  main
-                      #doc!= body
+    body
+      header
+        h1= title
+        nav
+            h2 Table of Contents
+            #toc!= toc
+            main
+                #doc!= body

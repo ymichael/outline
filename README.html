@@ -1,1 +1,40 @@
-<!DOCTYPE html><html><head><title>An Outline Generated HTML page.</title><link rel="stylesheet" type="text/css" href="undefined"></head></html>
+<!DOCTYPE html><html><head><title>An Outline Generated HTML page.</title><link rel="stylesheet" type="text/css" href="undefined"><body><header><h1>An Outline Generated HTML page.</h1><nav><h2>Table of Contents</h2><div id="toc"><ul><li><a href="#outlineamarkdowntohtmlstaticsitegenerator">Outline: A Markdown to HTML Static Site Generator</a></li><li><a href="#installation">Installation</a></li><li><a href="#quickstart">Quick Start</a></li><li><a href="#documentmetadatafrontmatter">Document Metadata (Front Matter)</a></li><li><a href="#layouts">Layouts</a></li><li><a href="#credits">Credits</a></li></ul></div><main><div id="doc"><h2 id="outlineamarkdowntohtmlstaticsitegenerator">Outline: A Markdown to HTML Static Site Generator</h2>
+<p>Inspired by <a href="http://jekyllrb.com/">Jekyll</a> but built with the following in mind:
+- <a href="http://jade-lang.com/">Jade</a> templates
+- <a href="http://daringfireball.net/projects/markdown/">Markdown</a> documents
+- <a href="http://nodejs.org">node.js</a>
+- Generates a table of contents from the headings in the markdown document</p>
+<h2 id="installation">Installation</h2>
+<pre><code>$ npm install -g outline-md</code></pre>
+<h2 id="quickstart">Quick Start</h2>
+<p>Run the following command in the folder containing your <code>.md</code> files.</p>
+<pre><code>$ outline-md</code></pre>
+<p>This <strong>deletes</strong> all existing <code>.html</code> files in the folder and compiles the <code>.md</code> files into HTML using the default layout. </p>
+<h2 id="documentmetadatafrontmatter">Document Metadata (Front Matter)</h2>
+<p>Much like <code>Jekyll</code> posts, you can attach metadata to your documents using <a href="http://www.yaml.org/">YAML</a>. Here is a sample document</p>
+<pre><code class="lang-md">---
+title: This is the title of my document.
+layout: base
+---
+# Introduction
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue.
+
+# Body
+Curabitur blandit tempus porttitor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+
+# Conclusion</code></pre>
+<h2 id="layouts">Layouts</h2>
+<p>Like <code>Jekyll</code>, outline searches for layouts in the <code>_layouts</code> directory. If no layout is specified, the default layout is used.</p>
+<pre><code class="lang-jade">// sample layout
+!!!
+html
+  head
+  body
+    #toc!= toc
+    #contents!= body</code></pre>
+<p>The jade template is given the <code>toc</code> and <code>body</code> variables parsed from the markdown. All other metadata from the document front matter is passed to the layout as well.</p>
+<h2 id="credits">Credits</h2>
+<ul>
+<li>Borrows heavily from <a href="https://github.com/marijnh/heckle">Heckle</a> source code.</li>
+</ul>
+</div></main></nav></header></body></head></html>
