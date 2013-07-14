@@ -1,6 +1,6 @@
 {
   "name": "outline-md",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Static site generator inspired by jekyll",
   "main": "index.js",
   "bin": {

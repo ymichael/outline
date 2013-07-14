@@ -1,9 +1,12 @@
 !!!
 html
   head
+    title= title
   body
     header
-      h1 Table of Contents
+      h1= title
+    nav
+      h2 Table of Contents
       #toc!= toc
     main
       #doc!= body
