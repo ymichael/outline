@@ -13,7 +13,7 @@ Inspired by [Jekyll][0] but built with the following in mind:
 # Quick Start
 Run the following command in the folder containing your `.md` files.
 
-    $ outline-md
+    $ outline
 
 This __deletes__ all existing `.html` files in the folder and compiles the `.md` files into HTML using the default layout. 
 
